@@ -1,0 +1,34 @@
+<div id="table" class="col-md-10 col-md-offset-1">
+    <uib-tabset active="active">
+        <uib-tab index="0" heading="Add new student">
+            <div class="col-md-10 col-md-offset-1">
+                <form ng-submit="submit()" class="form-group">
+                    <label for="names">Name</label>
+                    <input type="text" ng-model="formdata.name" class="form-control" autofocus id="names">
+                    <label for="surname">Surname</label>
+                    <input type="text" class="form-control" id="surname" ng-model="formdata.surname">
+                    <label for="indeks">Index</label>
+                    <input type="number" class="form-control" id="indeks" ng-model="formdata.indeks">
+                    <label for="smer">Smer</label>
+                    <input type="text" class="form-control" id="smer" ng-model="formdata.smer">
+                    <br>
+                    <input type="submit" id="submit" class="btn btn-primary" value="Submit">
+                </form>
+            </div>
+        </uib-tab>
+        <uib-tab index="1" heading="Add new subject to student">
+            <div class="col-md-10 col-lg-offset-1 " >
+                <form ng-submit="submitGrade()" class="form-group">
+                    <label for="StudentIndex">Student Index</label>
+                    <input type="text" ng-model="formSubject.indeks" class="form-control" autofocus id="StudentIndex">
+                    <label for="Subject">Subject</label>
+                    <input type="text" class="form-control" id="Subject" ng-model="formSubject.subject">
+                    <label for="Grade">Grade</label>
+                    <input type="number" class="form-control" id="Grade" ng-model="formSubject.grade">
+                    <br>
+                    <input type="submit"  class="btn btn-primary" value="Submit">
+                </form>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>

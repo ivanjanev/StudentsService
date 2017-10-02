@@ -1,0 +1,28 @@
+<h3>Subjects Table</h3>
+<div id="table" class="col-md-10 col-md-offset-1">
+    <form class="navbar-form pull-right" style="padding-right: 0px">
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="search.text" placeholder="Search">
+        </div>
+    </form>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Listened/Passed</th>
+        </tr>
+        <tr ng-repeat="sub in subs | filter : search.text">
+            <td>{{sub.name}}</td>
+            <td>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                         aria-valuenow="{{sub.percent}}" aria-valuemin="0" aria-valuemax="100" style="width:{{sub.percent}}%">
+                        {{sub.percent}}% / 100%
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div id="piechart">
+
+    </div>
+</div>

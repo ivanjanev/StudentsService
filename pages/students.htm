@@ -1,0 +1,22 @@
+<h3>Students Table</h3>
+<div id="table" class="col-md-10 col-md-offset-1">
+    <form class="navbar-form pull-right" style="padding-right: 0px">
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="search.text" placeholder="Search">
+        </div>
+    </form>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Name</th>
+            <th>Last name</th>
+            <th>Index</th>
+            <th>Group</th>
+        </tr>
+        <tr ng-repeat="x in stds | filter : search.text">
+            <td>{{x.name}}</td>
+            <td>{{x.surname}}</td>
+            <td style="cursor: pointer"><a ui-sref='student({id:{{x.indeks}}})'>{{x.indeks}}</a></td>
+            <td>{{x.smer}}</td>
+        </tr>
+    </table>
+</div>

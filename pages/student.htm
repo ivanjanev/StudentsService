@@ -1,0 +1,13 @@
+<h3>Student Grades for {{indeks}}</h3>
+<div id="table" class="col-md-10 col-md-offset-1">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Subject name</th>
+            <th>Grade</th>
+        </tr>
+        <tr ng-repeat="x in subjects">
+            <td>{{x.name}}</td>
+            <td>{{x.grade}}</td>
+        </tr>
+    </table>
+</div>
